@@ -1,34 +1,12 @@
-#eclipse
-/bin
-/.settings
-/.classpath
+#ignore everything except the InkCannon directory and the git-related files
+/*
+!.gitignore
+!LICENSE
+!README.md
+!InkCannon/
 
-#In case people make their workspace in the repo
-/eclipse/
+#ignore everything inside InkCannon except bin and src
+InkCannon/
+!InkCannon/bin/
+!InkCannon/src/
 
-#idea
-/.idea
-*.iml
-
-#gradle
-/build
-/.gradle
-
-#occupational hazards
-/projects/
-/repo/
-/buildSrc
-
-#Patch rejects
-*.rej
-/patches-/
-
-# FML changelog
-changelog.txt
-/patches_old/
-/patches_old_bak/
-*.py
-*.7z
-/.metadata
-/.recommenders
-/RemoteSystemsTempFiles
