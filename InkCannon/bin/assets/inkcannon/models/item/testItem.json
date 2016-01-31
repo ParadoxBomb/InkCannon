@@ -1,0 +1,7 @@
+{
+	"parent":"inkcannon:item/standardItem",
+	"textures":
+	{
+		"layer0":"inkcannon:items/testItem"
+	}
+}
