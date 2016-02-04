@@ -2,6 +2,6 @@
 	"parent":"inkcannon:item/standardItem",
 	"textures":
 	{
-		"layer0":"inkcannon:items/inkBow"
+		"layer0":"inkcannon:items/itemInkBow"
 	}
 }

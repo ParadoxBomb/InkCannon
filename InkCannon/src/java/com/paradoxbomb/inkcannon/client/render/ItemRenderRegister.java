@@ -1,4 +1,4 @@
-//class to register items for registration with the renderer
+//class to register items for rendering	
 
 package com.paradoxbomb.inkcannon.client.render;
 
@@ -12,13 +12,12 @@ import net.minecraft.item.Item;
 
 public final class ItemRenderRegister 
 {
-	public static String modid = Main.MODID;
 	public static void registerItemRenderer()
 	{
-		LogHelper.debug("Registering items for mod Ink Cannon...");
+		LogHelper.info("Registering items for mod Ink Cannon...");
 		reg(ModItems.testItem, 0);
 		reg(ModItems.inkBow, 0);
-		LogHelper.debug("Item registration complete");
+		LogHelper.info("Item registration complete");
 	}
 	
 	public static void reg(Item item, int meta)		
@@ -29,7 +28,8 @@ public final class ItemRenderRegister
 		//•location of the model file, which itself takes two parameters:
 		//	•item identifier in the format modname:unlocalizedName
 		//	•String "inventory"
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(modid + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		//	*.substring(5) is included because by default getUnlocalizedName() returns "item.<unlocalizedName>", but only "<unlocalizedName>" is desired.
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(Main.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
 	
 }

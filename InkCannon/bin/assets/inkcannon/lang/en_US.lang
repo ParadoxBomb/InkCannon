@@ -1,4 +1,5 @@
 ﻿<en_US.lang - English localization file for the Ink Cannon mod>
 
 item.testItem.name=Test Item Please Ignore
-item.inkBow.name=Ink Bow
+item.itemInkBow.name=Ink Bow
+tile.blockTestBlock.name = Test Block Please Ignore

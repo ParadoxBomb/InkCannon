@@ -4,6 +4,7 @@
 
 package com.paradoxbomb.inkcannon;
 
+import com.paradoxbomb.inkcannon.client.render.BlockRenderRegister;
 import com.paradoxbomb.inkcannon.client.render.ItemRenderRegister;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -23,6 +24,7 @@ public class ClientProxy extends CommonProxy
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		ItemRenderRegister.registerItemRenderer();
+		BlockRenderRegister.registerBlockRenderer();
 	}
 
 	@Override
