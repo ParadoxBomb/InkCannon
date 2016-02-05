@@ -3,7 +3,7 @@
 package com.paradoxbomb.inkcannon.client.render;
 
 import com.paradoxbomb.inkcannon.LogHelper;
-import com.paradoxbomb.inkcannon.Main;
+import com.paradoxbomb.inkcannon.StringLib;
 import com.paradoxbomb.inkcannon.common.ModItems;
 
 import net.minecraft.client.Minecraft;
@@ -29,7 +29,7 @@ public final class ItemRenderRegister
 		//	•item identifier in the format modname:unlocalizedName
 		//	•String "inventory"
 		//	*.substring(5) is included because by default getUnlocalizedName() returns "item.<unlocalizedName>", but only "<unlocalizedName>" is desired.
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(Main.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(StringLib.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
 	
 }

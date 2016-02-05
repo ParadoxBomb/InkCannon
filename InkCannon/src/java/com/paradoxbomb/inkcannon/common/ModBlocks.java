@@ -1,5 +1,7 @@
 package com.paradoxbomb.inkcannon.common;
 
+import com.paradoxbomb.inkcannon.StringLib;
+
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -9,6 +11,6 @@ public final class ModBlocks
 	
 		public static void createBlocks()
 		{
-			GameRegistry.registerBlock(testBlock = new TestBlock(TestBlock.UNLOCALIZED_NAME), TestBlock.UNLOCALIZED_NAME);
+			GameRegistry.registerBlock(testBlock = new TestBlock(StringLib.TEST_BLOCK), StringLib.TEST_BLOCK);
 		}
 }

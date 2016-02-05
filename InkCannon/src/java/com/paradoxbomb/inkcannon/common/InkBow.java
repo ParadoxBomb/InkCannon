@@ -7,8 +7,7 @@ import net.minecraft.item.Item;
 
 public class InkBow extends Item
 {
-	public static String UNLOCALIZED_NAME = "itemInkBow";
-	
+
 	public InkBow(String unlocalizedName)
 	{
 		super();

@@ -19,15 +19,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 //version is the version number, used in some screens
 //dependencies is any mod that this mod requires to run
 //useMetadata tells Forge to use the metadata described here
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION, dependencies = Main.MIN_FORGE , useMetadata = true)
+@Mod(modid = StringLib.MODID, name = StringLib.MODNAME, version = StringLib.VERSION, dependencies = StringLib.MIN_FORGE , useMetadata = true)
 public class Main 
 {
-	//text fields down here to condense the @Mod annotation
-	public static final String MODID = "inkcannon";
-	public static final String MODNAME = "Ink Cannon";
-	public static final String VERSION = "0.0.1";
-	public static final String MIN_FORGE = "required-after:Forge@[11.15.1.1722,)";
-	
 	//set up proxies
 	@SidedProxy(clientSide = "com.paradoxbomb.inkcannon.ClientProxy", serverSide="com.paradoxbomb.inkcannon.ServerProxy")
 	public static CommonProxy proxy;
@@ -43,22 +37,21 @@ public class Main
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		logger = event.getModLog();
-		LogHelper.debug("Entering PreInit phase for mod Ink Cannon");
+		LogHelper.info("Entering PreInit phase for mod Ink Cannon");
 		proxy.preinit(event);
 	}
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		LogHelper.debug("Entering Init phase for mod Ink Cannon");
+		LogHelper.info("Entering Init phase for mod Ink Cannon");
 		proxy.init(event);
 	}
 	
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		LogHelper.debug("Entering PostInit phase for mod Ink Cannon");
-		System.out.print("Called event handler PostInit");
+		LogHelper.info("Entering PostInit phase for mod Ink Cannon");
 		proxy.postInit(event);
 	}
 	
