@@ -13,7 +13,6 @@ public final class ModItems
 {
 	public static Item testItem;
 	public static Item inkBow;
-	public static Item inkArrow;
 
 	public static void createItems()
 	{
