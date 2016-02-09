@@ -4,6 +4,7 @@
 
 package com.paradoxbomb.inkcannon;
 
+import com.paradoxbomb.inkcannon.common.Crafting;
 import com.paradoxbomb.inkcannon.common.ModBlocks;
 import com.paradoxbomb.inkcannon.common.ModItems;
 
@@ -21,7 +22,7 @@ public class CommonProxy
 	
 	public void init(FMLInitializationEvent event)
 	{
-		
+		Crafting.initCrafting();
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)
