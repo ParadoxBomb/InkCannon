@@ -2,7 +2,7 @@
  * file to hold the common collection of items implemented in the mod
  */
 
-package com.paradoxbomb.inkcannon.common;
+package com.paradoxbomb.inkcannon.common.items;
 
 import com.paradoxbomb.inkcannon.StringLib;
 

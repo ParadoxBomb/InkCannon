@@ -4,9 +4,9 @@
 
 package com.paradoxbomb.inkcannon;
 
-import com.paradoxbomb.inkcannon.common.Crafting;
-import com.paradoxbomb.inkcannon.common.ModBlocks;
-import com.paradoxbomb.inkcannon.common.ModItems;
+import com.paradoxbomb.inkcannon.common.blocks.ModBlocks;
+import com.paradoxbomb.inkcannon.common.items.ModItems;
+import com.paradoxbomb.inkcannon.common.misc.Crafting;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;

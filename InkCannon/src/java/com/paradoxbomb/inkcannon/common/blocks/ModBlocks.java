@@ -1,4 +1,4 @@
-package com.paradoxbomb.inkcannon.common;
+package com.paradoxbomb.inkcannon.common.blocks;
 
 import com.paradoxbomb.inkcannon.StringLib;
 

@@ -1,6 +1,8 @@
 //main item for the mod
 
-package com.paradoxbomb.inkcannon.common;
+package com.paradoxbomb.inkcannon.common.items;
+
+import com.paradoxbomb.inkcannon.common.entities.EntityInkArrow;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;

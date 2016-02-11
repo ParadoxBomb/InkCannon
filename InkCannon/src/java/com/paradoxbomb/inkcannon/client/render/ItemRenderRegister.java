@@ -4,7 +4,7 @@ package com.paradoxbomb.inkcannon.client.render;
 
 import com.paradoxbomb.inkcannon.LogHelper;
 import com.paradoxbomb.inkcannon.StringLib;
-import com.paradoxbomb.inkcannon.common.ModItems;
+import com.paradoxbomb.inkcannon.common.items.ModItems;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;

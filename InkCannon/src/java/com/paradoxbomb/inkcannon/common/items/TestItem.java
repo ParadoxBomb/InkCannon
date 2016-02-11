@@ -2,7 +2,7 @@
  * Test item please ignore
  */
 
-package com.paradoxbomb.inkcannon.common;
+package com.paradoxbomb.inkcannon.common.items;
 
 
 import net.minecraft.item.Item;
