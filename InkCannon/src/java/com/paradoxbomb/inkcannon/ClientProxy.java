@@ -16,8 +16,9 @@ public class ClientProxy extends CommonProxy
 
 	@Override
 	public void preinit(FMLPreInitializationEvent event) {
-		// TODO Auto-generated method stub
 		super.preinit(event);
+		
+		BlockRenderRegister.preInitBlockstates();
 	}
 
 	@Override
@@ -29,7 +30,6 @@ public class ClientProxy extends CommonProxy
 
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
-		// TODO Auto-generated method stub
 		super.postInit(event);
 	}
 
