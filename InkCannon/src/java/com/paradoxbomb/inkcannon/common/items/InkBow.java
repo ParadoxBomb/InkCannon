@@ -2,7 +2,7 @@
 
 package com.paradoxbomb.inkcannon.common.items;
 
-import com.paradoxbomb.inkcannon.common.entities.EntityInkArrow;
+import com.paradoxbomb.inkcannon.common.entities.EntityInkBlob;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,7 +24,7 @@ public class InkBow extends Item
 	{
 		if(!worldIn.isRemote)
 		{
-			worldIn.spawnEntityInWorld(new EntityInkArrow(worldIn, playerIn, 15));
+			worldIn.spawnEntityInWorld(new EntityInkBlob(worldIn, playerIn, 15));
 		}
 		
 		return itemStackIn;
