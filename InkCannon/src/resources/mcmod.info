@@ -1,0 +1,15 @@
+{
+	"modListVersion":2,
+	"modList":
+	[{
+		"modid": "mod_InkCannon",
+		"name": "Ink Cannon",
+		"description": "A small mod allowing you to paint your world all the colors of the rainbow.",
+		"version": "0.0.2",
+		"mcversion": "1.8.9",
+		"url": "http://github.com/ParadoxBomb/InkCannon",
+		"updateUrl": "",
+		"authorList": ["ParadoxBomb"],
+		"credits": "Inspired by Mario90900 and Splatoon."
+	}]
+}

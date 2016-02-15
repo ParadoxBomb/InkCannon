@@ -1,0 +1,7 @@
+{
+	"variants":
+	{
+		"type=white": {"model":"inkcannon:block_properties_white"},
+		"type=black": {"model":"inkcannon:block_properties_black"}
+	}
+}
