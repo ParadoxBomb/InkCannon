@@ -17,8 +17,10 @@ public class StringLib
 	//blocks
 	public static final String TEST_BLOCK = "blockTestBlock";
 	public static final String META_BLOCK = "blockBlockWithMeta";
+	public static final String CANVAS_BLOCK = "blockCanvasBlock";
 	
 	//entities
 	public static final String INK_ARROW = "entityInkArrow";
+	public static final String INK_BLOB = "entityInkBlob";
 	
 }
