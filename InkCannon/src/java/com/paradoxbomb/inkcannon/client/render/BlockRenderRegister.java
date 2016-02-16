@@ -14,7 +14,7 @@ public final class BlockRenderRegister
 {
 	public static void registerBlockRenderer()
 	{
-		LogHelper.info("Registering blocks for item Ink Cannon...");
+		LogHelper.info("Registering blocks...");
 		reg(ModBlocks.testBlock, 0);
 		reg(ModBlocks.metaBlock, 0, "block_properties_white");
 		reg(ModBlocks.metaBlock, 1, "block_properties_black");
