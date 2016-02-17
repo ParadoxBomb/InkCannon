@@ -7,6 +7,7 @@ package com.paradoxbomb.inkcannon;
 import com.paradoxbomb.inkcannon.common.blocks.ModBlocks;
 import com.paradoxbomb.inkcannon.common.items.ModItems;
 import com.paradoxbomb.inkcannon.common.misc.Crafting;
+import com.paradoxbomb.inkcannon.common.tileEntities.ModTileEntities;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +19,7 @@ public class CommonProxy
 	{
 		ModItems.createItems();				//initialize mod items
 		ModBlocks.createBlocks();			//initialize mod blocks
+		ModTileEntities.init(); 			//initialize tile entities
 	}
 	
 	public void init(FMLInitializationEvent event)

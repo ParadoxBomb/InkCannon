@@ -38,9 +38,7 @@ public class EntityInkArrow extends EntityArrow
 	 private int ticksInGround;
 	 private int ticksInAir;
 	 private double damage = 0.0D;
-	 private int knockbackStrength = 0;
-	
-	public EntityInkArrow( World worldIn, EntityLivingBase shooter, float velocity)
+	 public EntityInkArrow( World worldIn, EntityLivingBase shooter, float velocity)
 	{
 		super(worldIn, shooter, velocity);
 	}
@@ -76,6 +74,7 @@ public class EntityInkArrow extends EntityArrow
         {
         	LogHelper.info("Collided successfully!");
         	LogHelper.info("Collided with:" + block.toString());
+        	this.setDead();
         }
         
         if (this.arrowShake > 0)
@@ -174,15 +173,13 @@ public class EntityInkArrow extends EntityArrow
                         l += this.rand.nextInt(l / 2 + 2);
                     }
 
-                    DamageSource damagesource;
-
                     if (this.shootingEntity == null)
                     {
-                        damagesource = DamageSource.causeArrowDamage(this, this);
+                        //damagesource = DamageSource.causeArrowDamage(this, this);
                     }
                     else
                     {
-                        damagesource = DamageSource.causeArrowDamage(this, this.shootingEntity);
+                        //damagesource = DamageSource.causeArrowDamage(this, this.shootingEntity);
                     }
 
                     if (this.isBurning() && !(movingobjectposition.entityHit instanceof EntityEnderman))
@@ -190,7 +187,7 @@ public class EntityInkArrow extends EntityArrow
                         movingobjectposition.entityHit.setFire(5);
                     }
 
-                    if (movingobjectposition.entityHit.attackEntityFrom(damagesource, (float)l))
+                    /*if (movingobjectposition.entityHit.attackEntityFrom(damagesource, (float)l))
                     {
                         if (movingobjectposition.entityHit instanceof EntityLivingBase)
                         {
@@ -229,16 +226,14 @@ public class EntityInkArrow extends EntityArrow
                         {
                             this.setDead();
                         }
-                    }
-                    else
-                    {
-                        this.motionX *= -0.10000000149011612D;
-                        this.motionY *= -0.10000000149011612D;
-                        this.motionZ *= -0.10000000149011612D;
-                        this.rotationYaw += 180.0F;
-                        this.prevRotationYaw += 180.0F;
-                        this.ticksInAir = 0;
-                    }
+                    }*/
+                    this.motionX *= -0.10000000149011612D;
+                    this.motionY *= -0.10000000149011612D;
+                    this.motionZ *= -0.10000000149011612D;
+                    this.rotationYaw += 180.0F;
+                    this.prevRotationYaw += 180.0F;
+                    this.ticksInAir = 0;
+                    
                 }
                 else
                 {
@@ -331,5 +326,4 @@ public class EntityInkArrow extends EntityArrow
             this.doBlockCollisions();
         }
 	}
-	
 }

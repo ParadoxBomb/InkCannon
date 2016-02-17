@@ -23,4 +23,7 @@ public class StringLib
 	public static final String INK_ARROW = "entityInkArrow";
 	public static final String INK_BLOB = "entityInkBlob";
 	
+	//tile entities
+	public static final String CANVAS_ENTITY = "tileEntityCanvas";
+	
 }

@@ -37,7 +37,6 @@ public class BlockCanvas extends Block implements ITileEntityProvider
 		this.isBlockContainer = true;
 	}
 
-	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) 
 	{
 		return new TECanvas();
