@@ -1,6 +1,7 @@
 package com.paradoxbomb.inkcannon.common.tileEntities.canvasBlock;
 
 import com.paradoxbomb.inkcannon.StringLib;
+import com.paradoxbomb.inkcannon.common.items.ModItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -17,12 +18,21 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockCanvas extends Block implements ITileEntityProvider
 {
-	protected BlockCanvas (String unlocalizedName)
+	
+	
+	public BlockCanvas (String unlocalizedName)
 	{
-		super(Material.rock);
+		super(Material.cloth);
 		this.setUnlocalizedName(StringLib.CANVAS_BLOCK);
-		this.setHarvestLevel(null, 0);
-		this.setHardness(5.0f);
+		this.setCreativeTab(ModItems.tabInkCannon);
+	}
+	
+	protected BlockCanvas (String unlocalizedName, Block disguiseBlock, World worldIn, BlockPos pos)
+	{
+		super(disguiseBlock.getMaterial());
+		this.setUnlocalizedName(StringLib.CANVAS_BLOCK);
+		this.setHarvestLevel(disguiseBlock.getHarvestTool((IBlockState)disguiseBlock.getBlockState()),disguiseBlock.getHarvestLevel((IBlockState)disguiseBlock.getBlockState()));
+		this.setHardness(disguiseBlock.getBlockHardness(worldIn, pos));
 		this.setResistance(5.0f);
 		this.isBlockContainer = true;
 	}

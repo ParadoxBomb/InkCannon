@@ -6,6 +6,7 @@ package com.paradoxbomb.inkcannon.common.items;
 
 import com.paradoxbomb.inkcannon.StringLib;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -21,4 +22,13 @@ public final class ModItems
 		GameRegistry.registerItem(testItem = new TestItem("testItem"), "testItem");	
 		GameRegistry.registerItem(inkBow = new InkBow(StringLib.INK_BOW), StringLib.INK_BOW);
 	}
+	
+	public static final CreativeTabs tabInkCannon = new CreativeTabs(StringLib.MODID)
+			{
+				@Override
+				public Item getTabIconItem()
+				{
+					return inkBow;
+				}
+			};
 }
