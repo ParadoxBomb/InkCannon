@@ -36,7 +36,7 @@ public class BlockCanvas extends Block implements ITileEntityProvider
 		this.setCreativeTab(ModItems.tabInkCannon);
 	}
 	
-	protected BlockCanvas (String unlocalizedName, Block disguiseBlock, World worldIn, BlockPos pos)
+	public BlockCanvas (Block disguiseBlock, World worldIn, BlockPos pos)
 	{
 		super(disguiseBlock.getMaterial());
 		this.setUnlocalizedName(StringLib.CANVAS_BLOCK);

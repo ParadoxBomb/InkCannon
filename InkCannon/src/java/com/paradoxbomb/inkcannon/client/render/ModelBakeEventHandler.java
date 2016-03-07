@@ -2,7 +2,6 @@
 
 package com.paradoxbomb.inkcannon.client.render;
 
-import com.paradoxbomb.inkcannon.LogHelper;
 import com.paradoxbomb.inkcannon.common.tileEntities.canvasBlock.CanvasBlockModelFactory;
 
 import net.minecraft.client.resources.model.IBakedModel;
