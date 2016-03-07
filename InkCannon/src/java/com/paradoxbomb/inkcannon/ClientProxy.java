@@ -15,21 +15,25 @@ public class ClientProxy extends CommonProxy
 {
 
 	@Override
-	public void preinit(FMLPreInitializationEvent event) {
+	public void preinit(FMLPreInitializationEvent event) 
+	{
 		super.preinit(event);
-		
-		BlockRenderRegister.preInitBlockstates();
+		//register block states so that the render register can do its thing in init phase
+		//BlockRenderRegister.preInitBlockstates();
 	}
 
 	@Override
-	public void init(FMLInitializationEvent event) {
+	public void init(FMLInitializationEvent event) 
+	{
 		super.init(event);
+		//register items and block to be rendered
 		ItemRenderRegister.registerItemRenderer();
 		BlockRenderRegister.registerBlockRenderer();
 	}
 
 	@Override
-	public void postInit(FMLPostInitializationEvent event) {
+	public void postInit(FMLPostInitializationEvent event) 
+	{
 		super.postInit(event);
 	}
 

@@ -1,3 +1,5 @@
+//file to allow entities to be registered
+
 package com.paradoxbomb.inkcannon.client.render;
 
 import com.paradoxbomb.inkcannon.LogHelper;

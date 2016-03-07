@@ -8,8 +8,9 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
 
-public class RenderInkBlob extends Render<EntityInkBlob>
+public class RenderInkBlob extends Render<EntityInkBlob> implements IRenderFactory<EntityInkBlob>
 {
     
     public RenderInkBlob (RenderManager renderManagerIn)
@@ -51,5 +52,12 @@ public class RenderInkBlob extends Render<EntityInkBlob>
 	{
 		ResourceLocation location = new ResourceLocation(StringLib.MODID + ":textures/entities/EntityInkBlob.png");
 		return location;
+	}
+
+	@Override
+	public Render createRenderFor(RenderManager manager) 
+	{
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

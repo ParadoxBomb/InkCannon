@@ -24,7 +24,7 @@ public class CommonProxy
 	
 	public void init(FMLInitializationEvent event)
 	{
-		Crafting.initCrafting();
+		Crafting.initCrafting();			//initialize crafting recipes
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)

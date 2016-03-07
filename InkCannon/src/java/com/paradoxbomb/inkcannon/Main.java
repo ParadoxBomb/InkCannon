@@ -30,6 +30,7 @@ public class Main
 	@Mod.Instance
 	public static Main instance = new Main();
 	
+	//create logger
 	public static Logger logger;
 	
 	//Forge Mod Loader event handlers

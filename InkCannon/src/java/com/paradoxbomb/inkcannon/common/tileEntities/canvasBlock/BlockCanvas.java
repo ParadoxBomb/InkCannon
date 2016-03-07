@@ -1,3 +1,5 @@
+//block that will replace a block in the world with a copy of its texture that can be tinted
+
 package com.paradoxbomb.inkcannon.common.tileEntities.canvasBlock;
 
 import com.paradoxbomb.inkcannon.StringLib;

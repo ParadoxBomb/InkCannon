@@ -1,3 +1,5 @@
+//stand-in projectile that will be used to change blocks until I can figure out how to make a custom entity
+
 package com.paradoxbomb.inkcannon.common.entities;
 
 import java.util.List;
@@ -6,6 +8,7 @@ import com.paradoxbomb.inkcannon.LogHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -68,6 +71,8 @@ public class EntityInkArrow extends EntityArrow
         IBlockState iblockstate = this.worldObj.getBlockState(blockpos);
         Block block = iblockstate.getBlock();
         
+        //if the arrow has collided with a non-air block, do stuff.
+        //checking for material rather than using isAirBlock() allows for mod blocks to not interfere with the flight path
         if (block.getMaterial() != Material.air)
         {
         	LogHelper.info("Collided successfully!");

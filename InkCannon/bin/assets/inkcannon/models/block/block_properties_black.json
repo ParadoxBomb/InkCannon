@@ -1,7 +1,0 @@
-{
-	"parent":"block/cube_all",
-	"textures":
-	{
-		"all":"inkcannon:blocks/block_properties_black"
-	}
-}
