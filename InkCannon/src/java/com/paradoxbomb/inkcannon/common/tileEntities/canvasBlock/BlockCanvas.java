@@ -8,19 +8,26 @@ import com.paradoxbomb.inkcannon.common.items.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.property.IExtendedBlockState;
+import net.minecraftforge.common.property.IUnlistedProperty;
+import net.minecraftforge.common.property.ExtendedBlockState;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockCanvas extends Block implements ITileEntityProvider
 {
 	
+	public static final UnlistedPropertyPaintedBlock PAINTED_BLOCK = new UnlistedPropertyPaintedBlock();
 	
 	public BlockCanvas (String unlocalizedName)
 	{
@@ -37,11 +44,20 @@ public class BlockCanvas extends Block implements ITileEntityProvider
 		this.setHardness(disguiseBlock.getBlockHardness(worldIn, pos));
 		this.setResistance(5.0f);
 		this.isBlockContainer = true;
+		this.setDefaultState((IBlockState)disguiseBlock.getDefaultState());
 	}
 
 	public TileEntity createNewTileEntity(World worldIn, int meta) 
 	{
 		return new TECanvas();
+	}
+	
+	@Override
+	protected BlockState createBlockState()
+	{
+		IProperty [] listedProperties = new IProperty[0];	//no listed properties
+		IUnlistedProperty [] unlistedProperties = new IUnlistedProperty [] {PAINTED_BLOCK};
+		return new ExtendedBlockState (this, listedProperties, unlistedProperties);
 	}
 	
 	@Override
@@ -59,6 +75,18 @@ public class BlockCanvas extends Block implements ITileEntityProvider
 	public EnumWorldBlockLayer getBlockLayer()
 	{
 		return EnumWorldBlockLayer.SOLID;
+	}
+	
+	@Override
+	public IBlockState getExtendedState(IBlockState state, IBlockAccess world, BlockPos pos)
+	{
+		if (state instanceof IExtendedBlockState)
+		{
+			IExtendedBlockState returnState = (IExtendedBlockState)state;
+			returnState = returnState.withProperty(PAINTED_BLOCK, state);
+			return returnState;
+		}
+		return state;
 	}
 	
 	@Override
