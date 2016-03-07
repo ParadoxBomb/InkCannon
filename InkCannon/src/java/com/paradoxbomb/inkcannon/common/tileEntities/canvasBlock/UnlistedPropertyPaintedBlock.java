@@ -1,5 +1,5 @@
 //file to assist CanvasBlockModelFactory in creating the model
-//
+
 
 package com.paradoxbomb.inkcannon.common.tileEntities.canvasBlock;
 

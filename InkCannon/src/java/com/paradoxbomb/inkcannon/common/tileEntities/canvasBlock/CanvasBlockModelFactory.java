@@ -1,6 +1,6 @@
 //class to assist in creating the model for canvas blocks
 //code based on http://bit.ly/1R1SbXO
-//
+
 package com.paradoxbomb.inkcannon.common.tileEntities.canvasBlock;
 
 import java.util.List;
