@@ -34,6 +34,7 @@ public class BlockCanvas extends Block implements ITileEntityProvider
 		super(Material.cloth);
 		this.setUnlocalizedName(StringLib.CANVAS_BLOCK);
 		this.setCreativeTab(ModItems.tabInkCannon);
+		this.isBlockContainer = true;
 	}
 	
 	public BlockCanvas (Block disguiseBlock, World worldIn, BlockPos pos)
@@ -69,6 +70,22 @@ public class BlockCanvas extends Block implements ITileEntityProvider
 		{
 			//initialize TE data
 		}
+	}
+	
+	//method to clean up the tile entity when the related block is destroyed
+	@Override
+	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
+	{
+		super.breakBlock(worldIn, pos, state);
+		worldIn.removeTileEntity(pos);
+	}
+	
+	@Override
+	public boolean onBlockEventReceived(World worldIn, BlockPos pos, IBlockState state, int eventID, int eventParam)
+	{
+		super.onBlockEventReceived(worldIn, pos, state, eventID, eventParam);
+		TileEntity te = worldIn.getTileEntity(pos);
+		return te == null ? false : te.receiveClientEvent(eventID, eventParam);
 	}
 	
 	@SideOnly(Side.CLIENT)

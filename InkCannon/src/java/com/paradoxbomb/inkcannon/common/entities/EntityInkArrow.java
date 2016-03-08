@@ -6,18 +6,14 @@ import java.util.List;
 
 import com.paradoxbomb.inkcannon.LogHelper;
 import com.paradoxbomb.inkcannon.common.blocks.ModBlocks;
-import com.paradoxbomb.inkcannon.common.tileEntities.canvasBlock.BlockCanvas;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumParticleTypes;
@@ -80,7 +76,7 @@ public class EntityInkArrow extends EntityArrow
         	LogHelper.info("Collided successfully!");
         	LogHelper.info("Collided with:" + block.toString());
         	this.worldObj.destroyBlock(blockpos, false);
-        	this.worldObj.setBlockState(blockpos, ModBlocks.blockCanvas.getExtendedState(iblockstate, this.worldObj, blockpos));
+        	this.worldObj.setBlockState(blockpos, ModBlocks.blockCanvas.getDefaultState());
         	this.setDead();
         }
         

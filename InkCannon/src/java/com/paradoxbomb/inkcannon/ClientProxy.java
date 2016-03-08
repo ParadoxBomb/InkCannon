@@ -31,7 +31,7 @@ public class ClientProxy extends CommonProxy
 		super.preinit(event);
 		
 		//tells Forge how to map BlockCanvas's IBlockState onto ModelResourceLocation
-		//since this block is special, an anonymous class is used instead of the normal methos
+		//since this block is special, an anonymous class is used instead of the normal method
 		StateMapperBase ignoreState = new StateMapperBase()
 				{
 					@Override
