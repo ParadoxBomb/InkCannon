@@ -3,5 +3,5 @@
 item.testItem.name=Test Item Please Ignore
 item.itemInkBow.name=Ink Bow
 tile.blockTestBlock.name=Test Block Please Ignore
-tile.blockCanvas.name=Canvas Block
+tile.blockCanvasBlock.name=Canvas Block
 itemGroup.inkcannon=Ink Cannon

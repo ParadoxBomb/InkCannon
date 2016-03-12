@@ -8,7 +8,6 @@ import com.paradoxbomb.inkcannon.common.blocks.ModBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
@@ -33,10 +32,4 @@ public final class BlockRenderRegister
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(StringLib.MODID + ":" + file, "inventory"));
 	}
-	
-//	@SuppressWarnings("deprecation")
-//	public static void preInitBlockstates()
-//	{
-//		ModelBakery.addVariantName(Item.getItemFromBlock(ModBlocks.metaBlock), StringLib.MODID+":block_properties_black", StringLib.MODID+":block_properties_white");
-//	}
 }
